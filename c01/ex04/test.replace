@@ -1,0 +1,31 @@
+clang++ -Wall -starshaft -Werror -std=c++98   -c -o main.o main.cpp
+clang++ -Wall -starshaft -Werror -std=c++98 main.cpp  -o sed
+➜  ex04 ./sed 
+➜  ex04 ./sed test 
+[1]    15497 segmentation fault  ./sed test
+➜  ex04 ./sed      
+➜  ex04 make       
+clang++ -Wall -starshaft -Werror -std=c++98   -c -o main.o main.cpp
+clang++ -Wall -starshaft -Werror -std=c++98 main.cpp  -o sed
+^[[A%                                                                         ➜  ex04 ./sed test 
+[1]    15534 segmentation fault  ./sed test
+➜  ex04 make
+clang++ -Wall -starshaft -Werror -std=c++98   -c -o main.o main.cpp
+clang++ -Wall -starshaft -Werror -std=c++98 main.cpp  -o sed
+➜  ex04 ./sed test 
+[1]    15577 segmentation fault  ./sed test
+➜  ex04 ls
+Makefile     main.o       sed.hpp      test.replace
+main.cpp     sed          test
+➜  ex04 make
+clang++ -Wall -starshaft -Werror -std=c++98   -c -o main.o main.cpp
+clang++ -Wall -starshaft -Werror -std=c++98 main.cpp  -o sed
+➜  ex04 ./sed test 
+[1]    17403 segmentation fault  ./sed test
+➜  ex04 make       
+clang++ -Wall -starshaft -Werror -std=c++98   -c -o main.o main.cpp
+clang++ -Wall -starshaft -Werror -std=c++98 main.cpp  -o sed
+^[[A%                                                                         ➜  ex04 ./sed test 
+➜  ex04 ./sed test salut bonjour
+➜  ex04 make fclean
+rm -rf main.o
