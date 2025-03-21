@@ -6,7 +6,7 @@ int main()
     randomChump("foo");
     std::cout << "zombie created on the heap" << std::endl;
     Zombie* heapzombie = newZombie("fart");
-    heapzombie->announce();
+    // heapzombie->announce();
     delete heapzombie;
     std::cout << "heapzombie has been deleted" << std::endl;
 }

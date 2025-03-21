@@ -23,7 +23,7 @@ public:
     ~HumanA()
     {
         std::cout << name << " has been destroyed" << std::endl;
-        std::cout << weapon.getType() << " has been destroyed" << std::endl;
+        // std::cout << weapon.getType() << " has been destroyed" << std::endl;
     }
     void attack()
     {

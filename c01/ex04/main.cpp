@@ -63,6 +63,10 @@ int main(int ac, char **av)
 	std::string s1 = av[2];
 	std::string s2 = av[3];
 	std::string ReplaceFile = FileName + ".replace";
+	if (!s1.length()) {
+		std::cout << "Invalid search string" << std::endl;
+		return 1;
+	}
 		
 	return replaceStringInFile(FileName, ReplaceFile, s1, s2) ? 0 : 1;
 }

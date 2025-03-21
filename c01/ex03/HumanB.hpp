@@ -27,6 +27,11 @@ public:
     }
     void attack()
     {
+        if (!weapon)
+        {
+            std::cout << name << " has no weapon to attack with" << std::endl;
+            return;
+        }
         std::cout << name << " attacks with their " << weapon->getType() << std::endl;
     }
 };

@@ -32,7 +32,8 @@ bool getValidInput(std::string &input, const std::string &prompt, const std::str
     {
         std::cout << prompt << std::endl;
         std::getline(std::cin, input);
-        
+        if (std::cin.eof())
+            return false;
         if (input == "EXIT")
             return false;
         if(input.empty())
@@ -134,13 +135,15 @@ int search_function(PhoneBook &phonebook)
         std::string answer;
         std::cout << "Please choose the index that you want to know more about" << std::endl;
         std::getline(std::cin, answer);
+        if (std::cin.eof())
+            return(0);
         if(answer == "EXIT")
             return(1);
         if(!(answer >= "0" && answer <= "8"))
             std::cout << "Wrong index please choose something else" << std::endl;
         else
         {
-            i = std::stoi(answer);
+            i = std::atoi(answer.c_str());
 
             if (i >= phonebook.getContactCount())
             {

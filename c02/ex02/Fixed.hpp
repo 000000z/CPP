@@ -45,8 +45,8 @@ public:
     int toInt( void ) const;
     int getRawBits( void ) const;
     void setRawBits( int const raw );
-    friend Fixed& operator++(Fixed& fixed);
-    friend Fixed& operator--(Fixed& fixed);
+    Fixed& operator++();
+    Fixed& operator--();
     Fixed operator++(int);
     Fixed operator--(int);
     static Fixed& min(Fixed &a, Fixed &b);

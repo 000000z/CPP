@@ -13,6 +13,8 @@ void ClapTrap::attack(const std::string& target)
 		return ;
 	}
 	std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->AttackDamage << " points of damage" << std::endl;
+	if (this->HitPoint < this->AttackDamage)
+		this->HitPoint = this->AttackDamage;
 	this->HitPoint -= this->AttackDamage;
 	this->EnergyPoint -= 1;
 }
@@ -30,6 +32,8 @@ void ClapTrap::takeDamage(unsigned int amount)
 		return ;
 	}
 	std::cout << "ClapTrap " << this->name << " has taken " << amount << " points of damage" << std::endl;
+	if (amount > this->HitPoint)
+		this->HitPoint = amount;
 	this->HitPoint -= amount;
 }
 

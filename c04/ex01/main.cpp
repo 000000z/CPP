@@ -32,7 +32,7 @@ int main()
 	Dog shee_un = chien;
 	shee_un.setDogIdea("Je suis un shee_un !", 3);
 	std::cout << shee_un.getDogIdea(3) << std::endl;
-	std::cout << "shee_uns new idea : " << shee_un.getDogIdea(3) << std::endl;
+	std::cout << "shee_un new idea : " << shee_un.getDogIdea(3) << std::endl;
 	std::cout << "chien's idea : "<< chien.getDogIdea(3) << std::endl;
 
 	std::cout << std::endl;

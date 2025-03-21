@@ -2,7 +2,7 @@ NAME = Animal
 SRC = main.cpp Animal.cpp 
 OBJS = $(SRC:.cpp=.o)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-CXX = clang++
+CXX = c++
 
 all: $(NAME)
 

@@ -43,7 +43,10 @@ public:
 			return ;
 		}
 		std::cout << "FragTrap " << this->name << " attacks " << target << ", causing " << this->AttackDamage << " points of damage" << std::endl;
-		this->HitPoint -= this->AttackDamage;
+		if (this->AttackDamage > this->HitPoint)
+			this->HitPoint = 0;
+		else
+			this->HitPoint -= this->AttackDamage;
 		this->EnergyPoint -= 1;
 	}
 	void highFivesGuys(void);

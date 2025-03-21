@@ -2,7 +2,7 @@ NAME = ScavTrap
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS = $(SRC:.cpp=.o)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-CXX = clang++
+CXX = c++
 
 all: $(NAME)
 

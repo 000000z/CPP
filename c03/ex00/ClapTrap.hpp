@@ -34,6 +34,9 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
     std::string getName(void);
+    unsigned int getHitPoints(void) { return (HitPoint); }
+    unsigned int getEnergyPoints(void) { return (EnergyPoint); }
+    unsigned int getAttackDamage(void) { return (AttackDamage); }
 
 };
 

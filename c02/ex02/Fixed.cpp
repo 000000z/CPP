@@ -79,16 +79,16 @@ bool   operator!=(const Fixed& nb1, const Fixed& nb2)
     return(nb1.getRawBits() != nb2.getRawBits());
 }
 
-Fixed& operator++(Fixed& fixed)
+Fixed& Fixed::operator++()
 {
-    fixed.number += 1; 
-    return fixed;
+    this->number += 1; 
+    return *this;
 }
 
-Fixed& operator--(Fixed& fixed)
+Fixed& Fixed::operator--()
 {
-    fixed.number -= 1; 
-    return fixed;
+    this->number -= 1; 
+    return *this;
 }
 
 Fixed Fixed::operator++(int)
